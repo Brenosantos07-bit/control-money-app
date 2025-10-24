@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <span class="account-balance">${formatCurrency(balance)}</span>
                             </div>
                             <button class="icon-btn edit-item-btn">
-                                <img src="/assets/imagens/Edit.svg" alt="Editar">
+                                <img src="./assets/imagens/Edit.svg" alt="Editar">
                             </button>
                         </li>`;
                 });
@@ -189,10 +189,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateTotalBalanceVisibility() {
         if (isBalanceVisible) {
             totalBalanceElement.textContent = originalTotalBalance;
-            if (visibilityIcon) visibilityIcon.src = "/assets/imagens/eye.svg";
+            if (visibilityIcon) visibilityIcon.src = "./assets/imagens/eye.svg";
         } else {
             totalBalanceElement.textContent = hiddenPlaceholder;
-            if (visibilityIcon) visibilityIcon.src = "/assets/imagens/eye-off.svg";
+            if (visibilityIcon) visibilityIcon.src = "./assets/imagens/eye-off.svg";
         }
         console.log("-> Visibilidade do saldo total atualizada. Visível:", isBalanceVisible);
     }

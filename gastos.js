@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             </div>
                             <span class="expense-value">${formatCurrency(value)}</span>
                             <button class="icon-btn edit-expense-btn">
-                                <img src="/assets/imagens/Edit.svg" alt="Editar">
+                                <img src="./assets/imagens/Edit.svg" alt="Editar">
                             </button>
                         </div>`;
 
