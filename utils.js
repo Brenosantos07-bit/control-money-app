@@ -2,7 +2,7 @@
 // Adicione mais bancos aqui se desejar.
 // Certifique-se que o 'logoPath' corresponde ao nome do ficheiro em assets/imagens/
 export const knownBanks = [
-    { name: "Nubank", logoPath: "./assets/imagens/Nubank_logo_2021.svg.png" },
+    { name: "Nubank", logoPath: "./assets/imagens/Logo-Nu-atual-1024x617.png" },
     { name: "Itaú", logoPath: "./assets/imagens/Itaú_Unibanco_logo_2023.svg.png" },
     { name: "Bradesco", logoPath: "./assets/imagens/bradesco-logo.png" },
     { name: "Santander", logoPath: "./assets/imagens/santander-logo.png" },
