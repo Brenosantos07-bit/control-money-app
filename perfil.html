@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Control Money</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+
+    <header class="header">
+        <div style="width: 40px;"></div> <h2 class="header-title">Meu Perfil</h2>
+        <div style="width: 40px;"></div> </header>
+
+    <main class="container">
+
+                <!-- Card de Informações do Usuário -->
+        <section class="card user-profile-card">
+            <div class="user-avatar-placeholder"></div>
+            
+            <!-- 
+              ↓↓↓ MUDANÇA AQUI ↓↓↓
+              Removemos o texto estático. O JS vai preencher isto.
+            -->
+            <h2 id="user-name">Carregando...</h2>
+            <p id="user-email">Carregando...</p>
+        </section>
+
+
+        <section class="settings-group">
+            <h3 class="group-title">Configurações do App</h3>
+            <ul class="settings-list">
+                <li class="setting-item">
+                    <span>Notificações de Vencimento</span>
+                    <button class="toggle-switch" id="toggle-notifications" role="switch" aria-checked="false"></button>
+                </li>
+                <li class="setting-item">
+                    <span>Modo Escuro</span>
+                    <button class="toggle-switch active" id="toggle-dark-mode" role="switch" aria-checked="true"></button>
+                </li>
+            </ul>
+        </section>
+
+        <section class="settings-group">
+            <h3 class="group-title">Ajuda e Suporte</h3>
+            <ul class="settings-list">
+                <li class="setting-item">
+                    <a href="#">Termos de Uso</a>
+                </li>
+                <li class="setting-item">
+                    <a href="#">Política de Privacidade</a>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="actions-group">
+            <button id="logout-btn" class="logout-btn">Sair (Logout)</button>
+            <a href="#" id="delete-account-link" class="delete-link">Excluir minha conta</a>
+        </section>
+
+    </main>
+    
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item">
+            
+            <span>Início</span>
+        </a>
+        <a href="gastos.html" class="nav-item">
+            
+            <span>Gastos</span>
+        </a>
+        <a href="perfil.html" class="nav-item active"> 
+            <span>Perfil</span>
+        </a>
+    </nav>
+
+    <script type="module" src="perfil.js"></script>
+</body>
+</html>

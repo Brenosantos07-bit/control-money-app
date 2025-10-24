@@ -1,0 +1,188 @@
+/* --- Reset Básico e Padrões --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5; /* Fundo cinza claro da página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+/* --- Contêiner Principal do Login --- */
+.login-container {
+    background-color: #37A37F; /* Sua cor principal */
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; 
+}
+
+/* --- Logo --- */
+.logo-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.logo-img {
+    width: 150px; 
+    height: auto;
+    margin-bottom: 8px;
+}
+.logo-container p {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* --- Textos de Boas-vindas --- */
+.welcome-text {
+    margin-bottom: 25px;
+}
+.welcome-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.welcome-text p {
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* --- Formulários (Regra geral para os 3 formulários) --- */
+#login-form,
+#signup-form,
+#forgot-password-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os campos */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo branco transparente */
+    color: #ffffff;
+}
+.form-group input:focus {
+    outline: none;
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* --- Mensagens de Erro/Sucesso --- */
+.error-message {
+    color: #FFDACC; /* Cor de erro clara */
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    display: none; /* Começa escondida */
+}
+
+/* Estilo para a mensagem de sucesso (nova) */
+.success-message {
+    color: #ffffff; /* Cor de sucesso (branco) */
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    display: none; /* Começa escondida */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo leve */
+    border-radius: 8px;
+}
+
+/* --- Botões de Ação (Regra geral para os 3 botões) --- */
+#login-btn,
+#signup-btn,
+#reset-btn { 
+    background-color: #ffffff;
+    color: #37A37F; /* Cor do texto (verde) */
+    border: none;
+    border-radius: 8px;
+    
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px; /* Espaço acima do botão */
+    
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#login-btn:hover,
+#signup-btn:hover,
+#reset-btn:hover {
+    background-color: #f0f2f5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Links de Login --- */
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+/* Alinha o link de 'Voltar' ao centro na página de recuperar senha */
+#forgot-password-form + .login-links {
+    justify-content: center;
+}
+.login-links a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    opacity: 0.9;
+}
+.login-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* --- Links do Rodapé --- */
+.footer-links {
+    margin-top: 30px;
+    text-align: center; 
+}
+.footer-links a {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+    opacity: 0.8;
+    margin: 0 8px; 
+}
+.footer-links a:hover {
+    opacity: 1;
+}
+

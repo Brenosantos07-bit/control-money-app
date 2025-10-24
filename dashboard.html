@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Control Money</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="dashboard.css">
+    
+<script src="https://unpkg.com/lucide-static@latest/dist/lucide.min.js"></script>
+
+</head>
+</head>
+<body>
+
+    <header class="header">
+        <div class="user-info">
+            <div class="user-avatar"></div>
+            <span id="user-greeting">Olá, Usuário!</span>
+        </div>
+        <button class="icon-btn">
+            <img src="/assets/imagens/notifications.png" alt="Notificações">
+        </button>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="card balance-card">
+            <span class="card-subtitle">Saldo Total</span>
+            <h2 class="total-balance">R$ 1.250,80</h2>
+
+            <button class="icon-btn visibility-btn">
+                <img src="/assets/imagens/eye.svg" alt="Mostrar/Ocultar Saldo" id="visibility-icon-img">
+            </button>
+        </section>
+
+        <section class="card accounts-card">
+            <div class="card-header">
+                <h3 class="card-title">Minhas Contas</h3>
+                </div>
+            
+            <ul class="accounts-list">
+                
+
+                
+            </ul>
+
+            <button id="add-account-btn" class="add-btn">
+                + Adicionar nova conta
+            </button>
+        </section>
+
+        <!-- Card 3: Resumo de Gastos -->
+        <section class="card expenses-summary-card">
+            <h3 class="card-title">Resumo de Gastos</h3>
+            <div class="expenses-categories">
+                
+                <!-- Categoria 1: Gastos Fixos -->
+                <div class="expense-category fixed-expenses">
+                    <span class="card-subtitle">Gastos Fixos</span>
+                    <!-- ↓↓↓ ID Adicionado ↓↓↓ -->
+                    <p class="expense-amount" id="fixed-expenses-total">R$ 0,00</p> 
+                </div>
+                
+                <!-- Categoria 2: Reserva Semanal -->
+                <div class="expense-category variable-expenses">
+                    <span class="card-subtitle">Reserva Semanal</span>
+                     <!-- ↓↓↓ ID Adicionado ↓↓↓ -->
+                    <p class="expense-amount" id="variable-expenses-total">R$ 0,00</p>
+                </div>
+
+            </div>
+             <!-- Botão Ver tudo -->
+             <button class="text-btn view-all-btn">Ver tudo</button>
+        </section>
+
+    </main>
+
+    
+
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item active">
+            <span>Início</span>
+        </a>
+        <a href="gastos.html" class="nav-item">
+            <span>Gastos</span>
+        </a>
+        <a href="perfil.html" class="nav-item">
+            <span>Perfil</span>
+        </a>
+    </nav>
+
+    
+
+    <div id="add-account-modal" class="modal-overlay">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <h3>Adicionar Nova Conta</h3>
+                <button id="modal-close-btn" class="icon-btn">
+                    <img src="/assets/imagens/X.svg" alt="Fechar">
+                </button>
+            </div>
+
+            <form id="add-account-form">
+                
+                <div class="form-group">
+                    <label for="account-name">Nome do Banco ou Conta</label>
+                    
+                    <select id="account-name" required>
+                        <option value="">Selecione um banco ou tipo</option>
+                        
+                    </select>
+                </div>  
+                
+                <div class="form-group">
+                    <label for="account-balance">Saldo Atual</label>
+                    <input type="number" id="account-balance" placeholder="Ex: 500.50" step="0.01" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Salvar Conta</button>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="edit-account-modal" class="modal-overlay">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <h3>Editar Conta</h3>
+                <button id="edit-modal-close-btn" class="icon-btn">
+                    <img src="/assets/imagens/X.svg" alt="Fechar">
+                </button>
+            </div>
+
+            <form id="edit-account-form">
+                
+                <div class="form-group">
+                    <label for="edit-account-name">Nome do Banco ou Conta</label>
+                    <input type="text" id="edit-account-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-account-balance">Saldo Atual</label>
+                    <input type="number" id="edit-account-balance" step="0.01" required>
+                </div>
+
+                <input type="hidden" id="edit-account-id">
+                
+                <div class="modal-actions">
+                    <button type="button" id="delete-account-btn" class="btn-danger">
+                        <img src="/assets/imagens/Trash.svg" alt="Excluir">
+                        Excluir
+                    </button>
+                    <button type="submit" class="submit-btn">Salvar Alterações</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="dashboard.js"></script>
+    
+    </body>
+</html>
+</body>
+</html>
